@@ -99,7 +99,7 @@ class Pedido:
         self.observacao.grid(row=7,column=1)
 
         tk.Label(self.cadastrarPedido, text="Tamanho:").grid(row=8, column=0)
-        self.tamanho = tk.StringVar()
+        self.tamanho = tk.StringVar(value="13")
 
         frame_tamanho = tk.Frame(self.cadastrarPedido)
         frame_tamanho.grid(row=8, column=1, columnspan=3, sticky="w")  
@@ -109,7 +109,7 @@ class Pedido:
             tk.Radiobutton(frame_tamanho, text=txt, variable=self.tamanho, value=val, command=self.calcular_valor).pack(side="left", padx=12)       
         
         tk.Label(self.cadastrarPedido, text="Forma de Pagamento:").grid(row=9, column=0, sticky="w")
-        self.pagamento = tk.StringVar()
+        self.pagamento = tk.StringVar(value="Dinheiro")
 
         frame_pagamento = tk.Frame(self.cadastrarPedido)
         frame_pagamento.grid(row=9, column=1, columnspan=5, sticky="w")  
